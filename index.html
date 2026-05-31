@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartCalc — Premium Calculator Suite</title>
+<title>SmartCalc | Free Online Calculator Suite</title>
 <link rel="icon" type="image/png" href="favicon.png">
+<meta name="description" content="SmartCalc offers free online calculators including EMI, SIP, GST, Tax, BMI, Age and more. Fast, accurate and easy calculations.">
+
+<meta name="keywords" content="calculator, EMI calculator, SIP calculator, GST calculator, BMI calculator, Age calculator, loan calculator, SmartCalc">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="SmartCalc | Free Online Calculator Suite">
+<meta property="og:description" content="Free online calculators for EMI, SIP, GST, Tax, BMI, Age and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calculatorhub.website/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SmartCalc | Free Online Calculator Suite">
+<meta name="twitter:description" content="Free online calculators for EMI, SIP, GST, Tax, BMI, Age and more.">
+
+<link rel="canonical" href="https://calculatorhub.website/">
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF7GENP0F"></script>
 <script>
@@ -972,8 +988,18 @@ function openCalc(id, name, cat, icon) {
   items.forEach(i => { if(i.textContent.trim() === name) i.classList.add('active'); });
 
   document.getElementById('topbarTitle').textContent = name;
-  document.title = name + ' - SmartCalc';
-  history.pushState(
+  document.title = name + ' | SmartCalc';
+
+let metaDesc = document.querySelector('meta[name="description"]');
+
+if(metaDesc){
+  metaDesc.setAttribute(
+    'content',
+    'Use our free ' + name + ' calculator online. Fast, accurate and easy calculations with SmartCalc.'
+  );
+}
+
+history.pushState(
   { calc: id },
   '',
   '#' + id
@@ -987,7 +1013,14 @@ function goHome() {
     document.querySelectorAll('.calc-page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.calc-item').forEach(i => i.classList.remove('active'));
     document.getElementById('topbarTitle').textContent = 'SmartCalc';
-    document.title = 'SmartCalc - Premium Calculator Suite';
+    document.getElementById('topbarTitle').textContent = 'SmartCalc';
+document.title = 'SmartCalc | Free Online Calculator Suite';
+
+document.querySelector('meta[name="description"]')
+?.setAttribute(
+  'content',
+  'SmartCalc offers free online calculators including EMI, SIP, GST, Tax, BMI, Age and more.'
+);
 }
 
 window.addEventListener('popstate', function() {
