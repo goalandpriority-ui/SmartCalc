@@ -972,16 +972,26 @@ function openCalc(id, name, cat, icon) {
   items.forEach(i => { if(i.textContent.trim() === name) i.classList.add('active'); });
 
   document.getElementById('topbarTitle').textContent = name;
-
+  
+  history.pushState(
+  { calc: id },
+  '',
+  '#' + id
+);
+  
   if(window.innerWidth <= 768) closeMobile();
 }
 
 function goHome() {
-  document.getElementById('home-page').style.display = 'block';
-  document.querySelectorAll('.calc-page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.calc-item').forEach(i => i.classList.remove('active'));
-  document.getElementById('topbarTitle').textContent = 'SmartCalc';
+    document.getElementById('home-page').style.display = 'block';
+    document.querySelectorAll('.calc-page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.calc-item').forEach(i => i.classList.remove('active'));
+    document.getElementById('topbarTitle').textContent = 'SmartCalc';
 }
+
+window.addEventListener('popstate', function() {
+    goHome();
+});
 
 function toggleSidebar() {
   const sb = document.getElementById('sidebar');
