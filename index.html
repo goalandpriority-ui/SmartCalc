@@ -972,7 +972,7 @@ function openCalc(id, name, cat, icon) {
   items.forEach(i => { if(i.textContent.trim() === name) i.classList.add('active'); });
 
   document.getElementById('topbarTitle').textContent = name;
-  
+  document.title = name + ' - SmartCalc';
   history.pushState(
   { calc: id },
   '',
@@ -987,6 +987,7 @@ function goHome() {
     document.querySelectorAll('.calc-page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.calc-item').forEach(i => i.classList.remove('active'));
     document.getElementById('topbarTitle').textContent = 'SmartCalc';
+    document.title = 'SmartCalc - Premium Calculator Suite';
 }
 
 window.addEventListener('popstate', function() {
