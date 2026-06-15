@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – CalculatorHub | Free Online Calculator Suite</title>
+  <meta name="description" content="CalculatorHub offers 80+ free online calculators for finance, health, education, real estate and more. Learn about our mission to make calculations simple and accessible for everyone.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF7GENP0F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF7GENP0F');
+  </script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1202355754527023" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #080B11;
+      --card: #0F1420;
+      --card2: #141928;
+      --border: #1E2A3A;
+      --text: #E8EDF5;
+      --muted: #7A8BA0;
+      --accent: #00D4FF;
+      --accent2: #7B61FF;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+
+    /* NAV */
+    nav { background: rgba(8,11,17,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--accent); text-decoration: none; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, rgba(0,212,255,0.08) 0%, rgba(123,97,255,0.05) 100%); border-bottom: 1px solid var(--border); padding: 60px 24px 50px; text-align: center; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(28px, 5vw, 48px); font-weight: 800; margin-bottom: 16px; background: linear-gradient(135deg, #00D4FF, #7B61FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { color: var(--muted); font-size: 17px; max-width: 600px; margin: 0 auto; }
+
+    /* CONTENT */
+    .container { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    .section { margin-bottom: 48px; }
+    .section h2 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .section p { color: var(--muted); font-size: 15px; margin-bottom: 14px; }
+    .section ul { color: var(--muted); font-size: 15px; padding-left: 20px; }
+    .section ul li { margin-bottom: 8px; }
+
+    /* STATS */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin: 28px 0; }
+    .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--accent); }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+    /* CATEGORIES GRID */
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+    .cat-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+    .cat-card h3 { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .cat-card p { font-size: 13px; color: var(--muted); margin: 0; }
+
+    /* TEAM / VALUES */
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+    .value-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+    .value-icon { font-size: 28px; margin-bottom: 10px; }
+    .value-card h3 { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .value-card p { font-size: 13px; color: var(--muted); margin: 0; }
+
+    /* CTA */
+    .cta-box { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(123,97,255,0.08)); border: 1px solid rgba(0,212,255,0.2); border-radius: 18px; padding: 36px; text-align: center; margin: 48px 0; }
+    .cta-box h2 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    .cta-box p { color: var(--muted); margin-bottom: 24px; }
+    .btn { display: inline-block; background: linear-gradient(135deg, #00D4FF, #7B61FF); color: #000; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; padding: 12px 28px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.85; }
+
+    /* FOOTER */
+    footer { background: var(--card); border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">⚡ CalculatorHub</a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>About CalculatorHub</h1>
+  <p>We build free, accurate, and beautifully designed online calculators for everyone — students, professionals, creators, and everyday users worldwide.</p>
+</div>
+
+<div class="container">
+
+  <!-- STATS -->
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num">80+</div><div class="stat-label">Free Calculators</div></div>
+    <div class="stat-card"><div class="stat-num">8</div><div class="stat-label">Categories</div></div>
+    <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Free Forever</div></div>
+    <div class="stat-card"><div class="stat-num">2026</div><div class="stat-label">Founded</div></div>
+  </div>
+
+  <!-- WHO WE ARE -->
+  <div class="section">
+    <h2>Who We Are</h2>
+    <p>CalculatorHub is a free online calculator platform built to give everyone access to professional-grade calculation tools without any cost, subscription, or sign-up. We believe that financial literacy, health awareness, and smart decision-making should be accessible to all — not just those who can afford expensive software or financial advisors.</p>
+    <p>Our team is passionate about building tools that are not just mathematically accurate, but also easy to understand and use on any device. Every calculator on our platform is designed with clarity, speed, and mobile-friendliness as top priorities.</p>
+    <p>Whether you are planning your home loan EMI, calculating your BMI, estimating your YouTube earnings, or figuring out how much GST to charge a client — CalculatorHub has a tool for you.</p>
+  </div>
+
+  <!-- OUR MISSION -->
+  <div class="section">
+    <h2>Our Mission</h2>
+    <p>Our mission is simple: <strong style="color:var(--accent)">make complex calculations simple, free, and accessible for everyone.</strong></p>
+    <p>We live in a world filled with financial decisions, health choices, and business calculations that can significantly impact our lives. Yet most people lack the tools or knowledge to make these calculations confidently. CalculatorHub bridges that gap by offering a comprehensive suite of free online calculators built on proven formulas and real-world standards.</p>
+    <p>We are committed to keeping every tool on CalculatorHub completely free — no paywalls, no sign-up requirements, no hidden fees. Our revenue comes from non-intrusive advertising that supports our development and hosting costs.</p>
+  </div>
+
+  <!-- WHAT WE OFFER -->
+  <div class="section">
+    <h2>What We Offer</h2>
+    <p>CalculatorHub currently offers over 80 free online calculators organized across 8 major categories:</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <h3>💰 Finance</h3>
+        <p>EMI, SIP, FD, RD, GST, Income Tax, CAGR, Mortgage, Compound Interest, Loan Eligibility and more — 30+ calculators.</p>
+      </div>
+      <div class="cat-card">
+        <h3>🏥 Health</h3>
+        <p>BMI, Age, Calorie, Water Intake, Body Fat, Pregnancy Due Date, Ovulation, Heart Rate Zones, Macro Calculator.</p>
+      </div>
+      <div class="cat-card">
+        <h3>🎓 Education</h3>
+        <p>GPA Calculator, CGPA to Percentage, Grade Calculator, Study Hours Planner, Reading Speed, Words Per Minute.</p>
+      </div>
+      <div class="cat-card">
+        <h3>📱 Creator Tools</h3>
+        <p>YouTube Money Calculator, Instagram Earnings, TikTok Revenue, AdSense Estimator, Freelancer Rate, Blog Income.</p>
+      </div>
+      <div class="cat-card">
+        <h3>🏠 Real Estate</h3>
+        <p>Property Tax, Rental Yield, Cap Rate, ROI, Down Payment Savings, Closing Cost Calculator.</p>
+      </div>
+      <div class="cat-card">
+        <h3>📊 Business</h3>
+        <p>Profit Margin, Markup, Revenue, Burn Rate, Startup Valuation, Return on Equity (ROE) Calculator.</p>
+      </div>
+      <div class="cat-card">
+        <h3>🔧 Utility</h3>
+        <p>Unit Converter, Time Zone Calculator, Date Difference, Fuel Cost, Electricity Bill, Internet Speed, Typing Speed Test.</p>
+      </div>
+      <div class="cat-card">
+        <h3>❤️ Fun Tools</h3>
+        <p>Love Calculator, Name Compatibility, Lucky Number, Zodiac Compatibility — for entertainment and curiosity.</p>
+      </div>
+    </div>
+    <p>Each calculator includes a detailed explanation of what it calculates, the underlying mathematical formula, key benefits, and frequently asked questions — making CalculatorHub not just a tool, but an educational resource.</p>
+  </div>
+
+  <!-- OUR VALUES -->
+  <div class="section">
+    <h2>Our Core Values</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <h3>Accuracy First</h3>
+        <p>Every calculator uses verified mathematical formulas and industry-standard methods. We continuously review and update our tools to ensure precise results.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🆓</div>
+        <h3>Always Free</h3>
+        <p>We believe financial and educational tools should be accessible to everyone. CalculatorHub is and will always be 100% free to use — no subscriptions, no sign-ups.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📱</div>
+        <h3>Mobile First</h3>
+        <p>Our calculators are designed to work perfectly on any device — phone, tablet, or desktop. Fast loading, intuitive design, and touch-friendly interface on every screen size.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <h3>Privacy Respected</h3>
+        <p>All calculations happen instantly in your browser. We do not store, collect, or share any data you enter into our calculators. Your financial and personal data stays private.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📚</div>
+        <h3>Educational</h3>
+        <p>Beyond just numbers, we explain formulas, concepts, and real-world applications. Our goal is to help users understand what they are calculating, not just get an answer.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌍</div>
+        <h3>Global & Local</h3>
+        <p>From Indian EMI and GST calculators to US Mortgage and 401(k) tools, we serve users across India, the USA, UK, Canada, Australia and globally.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <h2>How CalculatorHub Works</h2>
+    <p>CalculatorHub is a browser-based single-page application. This means all calculations happen instantly in your browser without any server round-trips or data transmission. Here is how it works:</p>
+    <ul>
+      <li><strong style="color:var(--text)">Enter your values</strong> — Fill in the input fields with your specific numbers (loan amount, income, weight, views, etc.)</li>
+      <li><strong style="color:var(--text)">Click Calculate</strong> — Our built-in JavaScript instantly computes the result using verified formulas</li>
+      <li><strong style="color:var(--text)">See detailed results</strong> — Get your primary result plus additional breakdowns like monthly vs annual figures, percentages, and comparisons</li>
+      <li><strong style="color:var(--text)">Learn with context</strong> — Read the "What is" explanation, formula breakdown, benefits, and FAQ for each calculator</li>
+    </ul>
+    <p style="margin-top:14px">No account required. No data stored. No loading delays. Just instant, accurate calculations whenever you need them.</p>
+  </div>
+
+  <!-- WHY CHOOSE US -->
+  <div class="section">
+    <h2>Why Choose CalculatorHub?</h2>
+    <p>There are many online calculators available, but CalculatorHub stands out for several important reasons:</p>
+    <ul>
+      <li><strong style="color:var(--text)">All calculators in one place</strong> — No need to visit multiple websites. Finance, health, education, creator tools, real estate, and business calculators all in one beautifully designed platform.</li>
+      <li><strong style="color:var(--text)">Professional-grade accuracy</strong> — We use the same formulas used by banks, financial advisors, and healthcare professionals worldwide.</li>
+      <li><strong style="color:var(--text)">Comprehensive explanations</strong> — Every calculator comes with a full guide explaining the formula, real-world examples, key benefits, and common questions.</li>
+      <li><strong style="color:var(--text)">Beautiful, modern design</strong> — We care deeply about user experience. Our dark-themed, high-contrast design is easy on the eyes and works perfectly in any lighting condition.</li>
+      <li><strong style="color:var(--text)">Fast and lightweight</strong> — CalculatorHub loads in under 2 seconds and works even on slow connections. No heavy frameworks, no unnecessary bloat.</li>
+      <li><strong style="color:var(--text)">Continuously updated</strong> — We regularly add new calculators, update formulas for current tax rates and regulations, and improve the user experience based on feedback.</li>
+    </ul>
+  </div>
+
+  <!-- CONTENT POLICY -->
+  <div class="section">
+    <h2>Our Content Standards</h2>
+    <p>CalculatorHub is committed to providing accurate, reliable, and helpful content. All calculators and educational articles on our platform go through a review process to ensure:</p>
+    <ul>
+      <li>Mathematical formulas are verified against official sources (RBI, IRS, WHO, etc.)</li>
+      <li>Default values and examples reflect real-world scenarios</li>
+      <li>Explanations are written in clear, jargon-free language</li>
+      <li>Content is updated regularly to reflect current rates, rules, and standards</li>
+    </ul>
+    <p style="margin-top:14px"><strong style="color:var(--text)">Disclaimer:</strong> The calculators and content on CalculatorHub are provided for educational and informational purposes only. Results should not be considered as professional financial, medical, or legal advice. Always consult a qualified professional for important decisions.</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h2>Ready to Start Calculating?</h2>
+    <p>Explore our 80+ free calculators and make smarter decisions today. No sign-up required.</p>
+    <a href="/" class="btn">Explore All Calculators →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </div>
+  <p class="footer-copy">© 2026 CalculatorHub. All rights reserved. | Free Online Calculators for Finance, Health, Education & More</p>
+</footer>
+
+</body>
+</html>
